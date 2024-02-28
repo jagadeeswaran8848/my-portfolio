@@ -25,7 +25,7 @@ const data = {
       title: "Intern (selected)",
       subTitle: "Kaar Technologies, Chennai, TamilNadu",
       description:
-        "Creative Direction Project Management, Team Leading",
+        "Just selected for internship.",
     },
   ],
   education: [
