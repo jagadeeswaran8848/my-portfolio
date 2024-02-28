@@ -15,7 +15,7 @@ import ImageTen from "../../images/virtual painting app.png"
 import { useState } from "react";
 import './style.scss'
 
-const portfolioData = [
+const projectsData = [
   {
     sectionId: 2,
     projectName: "Age calculator",
@@ -97,32 +97,32 @@ function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [filterValue, setFiltervalue] = useState(1);
 
-  const updatedPortFolioData =
+  const updatedprojectsData =
     filterValue === 1
-      ? portfolioData
-      : portfolioData.filter((item) => item.sectionId === filterValue);
+      ? projectsData
+      : projectsData.filter((item) => item.sectionId === filterValue);
   return (
-    <section id="portfolio" className="portfolio">
+    <section id="projects" className="projects">
       <PageHeaderContent
-        headerText="My Portfolio"
+        headerText="My projects"
         icon={<AiFillProject size={40} />}
       />
-      <div className="portfolio__content">
-        <ul className="portfolio__content__filter">
+      <div className="projects__content">
+        <ul className="projects__content__filter">
           {filteroptions.map((option) => (
             <li className={option.id === filterValue && 'active'} onClick={() => setFiltervalue(option.id)} key={option.id}>
               {option.label}
             </li>
           ))}
         </ul>
-        <div className="portfolio__content__cards">
-          {updatedPortFolioData.map((item, index) => (
+        <div className="projects__content__cards">
+          {updatedprojectsData.map((item, index) => (
             <div
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="portfolio__content__cards__item"
+              className="projects__content__cards__item"
             >
-              <div className="portfolio__content__cards__item__img-wrapper">
+              <div className="projects__content__cards__item__img-wrapper">
                 <a>
                   <img src={item.image} />
                 </a>

@@ -1,4 +1,4 @@
-.portfolio {
+.projects {
     &__content {
       padding: 20px;
       width: 100%;
@@ -108,18 +108,18 @@
     }
   }
   @media only screen and (max-width: 480px) {
-    .portfolio__content__filter > li {
+    .projects__content__filter > li {
      font-size: 14px;
     }
-    .portfolio__content__cards{
+    .projects__content__cards{
       grid-template-columns: repeat(1,1fr);
     }
   }
   @media only screen and (min-width : 481px) and (max-width: 768px) {
-    .portfolio__content__filter > li {
+    .projects__content__filter > li {
       font-size: 14px;
      }
-     .portfolio__content__cards{
+     .projects__content__cards{
       grid-template-columns: repeat(2,1fr);
     }
   }
