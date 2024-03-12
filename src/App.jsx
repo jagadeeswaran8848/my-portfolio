@@ -11,6 +11,7 @@ import Resume from "./containers/resume";
 import Contact from "./containers/contact";
 import Skills from "./containers/skills";
 import Theme from "./components/Theme";
+import Main from "./components/particles";
 
 function App() {
   // const particlesInit = async (main) => {
@@ -33,7 +34,8 @@ function App() {
         <Navbar />
       </div>
       <div className="App__main-content">
-        <Theme/>
+        {/* <Theme/> */}
+        <Main/>
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="about" element={<About />} />
