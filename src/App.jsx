@@ -18,8 +18,8 @@ function App() {
   //   await loadFull(main);
   // };
 
-  // const location = useLocation();
-  // const showParticles = location.pathname === "/";
+  const location = useLocation();
+  const showParticles = location.pathname === "/";
 
   return (
     <div className="App">
@@ -35,7 +35,9 @@ function App() {
       </div>
       <div className="App__main-content">
         {/* <Theme/> */}
+        {showParticles && (
         <Main/>
+        )}
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="about" element={<About />} />
